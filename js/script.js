@@ -28,8 +28,9 @@ async function fetchApiRequest() {
     //                                 </div>
     //                                 </a>`;
     // }
+    // films.forEach()
 
-    films.forEach(function (film) {
+    films.forEach((film) => {
       resultsContainer.innerHTML += `<a href="details.html?uid=${film.uid}" class="card">
                                       <div class="result">
                                         <h2>${film.properties.title}</h2>
@@ -42,11 +43,10 @@ async function fetchApiRequest() {
     });
   } catch (error) {
     console.log(error);
-    // resultsContainer.innerHTML = alert("error", error);
+    resultsContainer.innerHTML = alert("error", error);
   }
 }
 
 fetchApiRequest();
 
 // TODO: convert to map??
-// https://www.youtube.com/watch?v=G6J2kl1aVao
